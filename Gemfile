@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'cucumber-rails', :require => false
+   # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -43,6 +46,11 @@ group :development do
   gem 'rb-fsevent'
   gem 'terminal-notifier-guard'
 end
+
+group :test do
+  gem "json_matchers"
+end
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

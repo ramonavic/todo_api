@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": ["todos"],
+  "properties": {
+    "todos": {
+      "type": "array",
+      "items":{
+        "required": ["id", "description", "completed"],
+        "properties": {
+          "id": { "type": "integer" },
+          "description": { "type": "string" },
+          "completed": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

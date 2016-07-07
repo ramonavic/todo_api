@@ -8,9 +8,11 @@ describe Todo do
       expect(todo.errors).to have_key (:description)
     end
   end
+end
 
-  describe 'completed status'
-    it "is false when a new todo is created"
+describe 'completed status' do
+    it "is false when a new todo is created" do
     todo = Todo.new(description: "")
     expect(todo.completed).to be(false)
+  end
 end
