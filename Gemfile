@@ -47,6 +47,9 @@ group :development do
   gem 'terminal-notifier-guard'
 end
 
+group :test do
+  gem "json_matchers"
+end
 
 
 group :development, :test do
