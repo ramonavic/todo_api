@@ -12,9 +12,10 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
+    head :ok
 
     if @todo.save
-      json { render :show, status: :created, location: @todo }
+      json { render :show, status: :created, location: @todo  }
     else
       json { render json: @todo.errors, status: :unprocessable_entity }
     end
