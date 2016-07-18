@@ -11,7 +11,7 @@ class TodosController < ApplicationController
   end
 
   def create
-    @todo = Todo.new(todo_params)
+    @todo = Todo.new
 
     if @todo.save
       json { render :show, status: :created, location: @todo }
